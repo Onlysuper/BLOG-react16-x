@@ -26,11 +26,11 @@ class Menus extends React.Component {
           <Menu
             theme="light"
             mode={this.props.mode}
-            defaultSelectedKeys={['2']}
             style={{ lineHeight: '62px',flex:'1' }}
             onClick={this.menuHandle}
+            defaultSelectedKeys={['home']}
           >
-            <Menu.Item key="home">首页</Menu.Item>
+            <Menu.Item selectable={true} key="home">首页</Menu.Item>
             <Menu.Item key="article">文章</Menu.Item>
             <Menu.Item key="about">关于</Menu.Item>
             <Menu.Item key="count">计数器</Menu.Item>
