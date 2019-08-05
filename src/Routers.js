@@ -93,7 +93,7 @@ class ContainerBox extends React.Component {
               </div>
           </div>
         </Header>
-        <Content style={{  padding: '2.4rem', background: '#fff', minHeight: '28rem',maxWidth:'100rem',width:'100%',margin: '6.4rem auto 2.4rem', }}>
+        <Content style={{  padding: '2.4rem', minHeight: '28rem',maxWidth:'100rem',width:'100%',margin: '6.4rem auto 2.4rem', }}>
           <div>
             <Route path="/" exact component={HomePage} />
             <Route path="/home" exact component={HomePage} />
