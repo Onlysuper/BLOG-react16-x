@@ -11,6 +11,9 @@
 .ArticleDetail .author .content {
   padding-left: 1rem;
 }
+.ArticleDetail .content {
+  padding: 0;
+}
 .ArticleDetail .content p {
   margin-bottom: 1rem;
 }
