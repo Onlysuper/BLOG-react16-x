@@ -53,10 +53,12 @@ class HomePage extends React.Component{
       return (
       
           <Row style={{minWidth:300}} gutter={16}>
-            <Col xs={24} sm={12} md={16} lg={16} xl={17} style={{background:'#fff'}}>
+            <Col xs={24} sm={12} md={16} lg={16} xl={17}>
               <Spin spinning={this.state.loadingArticle}>
+                <div style={{background:'#fff',marginBottom:'1rem'}}>
                 <HomeList articleList={this.state.articleList}/>
                 <Button type="dashed" style={{width:'100%'}}>阅读更多</Button>
+                </div>
               </Spin>
             </Col>
             <Col xs={24} sm={12} md={4} lg={8} xl={7}>

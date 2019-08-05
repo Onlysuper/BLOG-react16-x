@@ -86,7 +86,7 @@ class ContainerBox extends React.Component {
             type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
             onClick={this.toggle}
           />
-          <div className='m-pc-head' style={{maxWidth:'100rem',width:'100%',margin: '0 auto'}}>
+          <div className='m-pc-head' style={{margin: '0 13rem'}}>
               <div className="logo" />
               <MenuRouter mode="horizontal"/>
               <div>
@@ -94,7 +94,7 @@ class ContainerBox extends React.Component {
               </div>
           </div>
         </Header>
-        <Content style={{  padding: '2.4rem', minHeight: '28rem',maxWidth:'100rem',width:'100%',margin: '6.4rem auto 2.4rem', }}>
+        <Content className='main-content' style={{  padding: '2.4rem', minHeight: '28rem'}}>
           <div>
             <Route path="/" exact component={HomePage} />
             <Route path="/home" exact component={HomePage} />
@@ -105,9 +105,6 @@ class ContainerBox extends React.Component {
         </Content>
         <div>
           <BackTop />
-          Scroll down to see the bottom-right
-          <strong style={{ color: 'rgba(64, 64, 64, 0.6)' }}> gray </strong>
-          button.
         </div>
       </Layout>
     </Layout>
