@@ -1,12 +1,46 @@
 import React from 'react';
 import { Avatar} from 'antd';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import '../styles/ArticleDetail.less';
 class ArticleDetail extends React.Component{
   constructor(props){
     super()
   }
   state = {
-  };
+    codeString:`class ScrollingList extends React.Component {
+      constructor(props) {
+        super(props);
+        this.listRef = React.createRef();
+      }
+    
+      getSnapshotBeforeUpdate(prevProps, prevState) {
+        //我们是否要添加新的 items 到列表?
+        // 捕捉滚动位置，以便我们可以稍后调整滚动.
+        if (prevProps.list.length < this.props.list.length) {
+          const list = this.listRef.current;
+          return list.scrollHeight - list.scrollTop;
+        }
+        return null;
+      }
+    
+      componentDidUpdate(prevProps, prevState, snapshot) {
+        //如果我们有snapshot值, 我们已经添加了 新的items.
+        // 调整滚动以至于这些新的items 不会将旧items推出视图。
+        // (这边的snapshot是 getSnapshotBeforeUpdate方法的返回值)
+        if (snapshot !== null) {
+          const list = this.listRef.current;
+          list.scrollTop = list.scrollHeight - snapshot;
+        }
+      }
+    
+      render() {
+        return (
+          <div ref={this.listRef}>{/* ...contents... */}</div>
+        );
+      }
+    }`
+  }
   componentWillMount(){
     console.log(this.props.location.state.id)//val值
   }
@@ -32,6 +66,9 @@ class ArticleDetail extends React.Component{
             <p>super(props)用来调用基类的构造方法( constructor() ), 也将父组件的props注入给子组件，功子组件读取(组件中props只读不可变，state可变)。
   而constructor()用来做一些组件的初始化工作，如定义this.state的初始内容。</p>
           </div>
+          <SyntaxHighlighter language="javascript" style={docco}>
+            {this.state.codeString}
+          </SyntaxHighlighter>
         </div>
         )
   }
