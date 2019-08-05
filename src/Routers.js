@@ -5,6 +5,7 @@ import './style.less'  //引入less文件
 import { Layout, Menu,Icon,Avatar,BackTop} from 'antd';
 import HomePage from "./views/HomePage";
 import ArticlePage from "./views/ArticlePage";
+import ArticleDetail from "./views/ArticleDetail";
 import AboutPage from "./views/AboutPage";
 import CounPage from "./views/CounPage";
 
@@ -100,6 +101,7 @@ class ContainerBox extends React.Component {
             <Route path="/home" exact component={HomePage} />
             <Route path="/about" exact component={AboutPage} />
             <Route path="/article" component={ArticlePage} />
+            <Route path="/articledetail" component={ArticleDetail} />
             <Route path="/count" component={CounPage} />
           </div>
         </Content>

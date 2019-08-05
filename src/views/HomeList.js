@@ -15,7 +15,7 @@ class HomeList extends React.Component{
         this.props.articleList.map((item,index) =>
           <div key={index} className='article-list'>
              <Link to={{
-               pathname:'/article',
+               pathname:'/articledetail',
                state:{id:index}
              }}>
                 <div className="content">

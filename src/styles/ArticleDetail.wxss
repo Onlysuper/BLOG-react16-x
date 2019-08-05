@@ -1,0 +1,19 @@
+.ArticleDetail {
+  background: #fff;
+  padding: 1rem;
+}
+.ArticleDetail .author {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.ArticleDetail .author .content {
+  padding-left: 1rem;
+}
+.ArticleDetail .content p {
+  margin-bottom: 1rem;
+}
+.ArticleDetail .content img {
+  max-width: 100%;
+}
