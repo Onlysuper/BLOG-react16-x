@@ -24,10 +24,10 @@ class Menus extends React.Component {
   render(){
     return (
           <Menu
-            theme="dark"
+            theme="light"
             mode={this.props.mode}
             defaultSelectedKeys={['2']}
-            style={{ lineHeight: '64px',flex:'1' }}
+            style={{ lineHeight: '62px',flex:'1' }}
             onClick={this.menuHandle}
           >
             <Menu.Item key="home">首页</Menu.Item>
@@ -65,8 +65,9 @@ class ContainerBox extends React.Component {
   }
   render(){
     return (
-      <Layout>
+      <Layout  theme="light">
       <Sider
+        theme="light"
         className='m-sider'
         collapsedWidth="0"
         trigger={null}
@@ -77,10 +78,10 @@ class ContainerBox extends React.Component {
         <MenuRouter mode="inline"/>
       </Sider>
       <Layout>
-        <Header style={{ padding: '0,3rem', position: 'fixed', width: '100%',zIndex:1}}>
+        <Header style={{ padding: '0,3rem', position: 'fixed', width: '100%',zIndex:1,background:'#fff',borderBottom: '1px solid #e8e8e8'}}>
           <Icon
             className="trigger"
-            style={{color:'#fff' }}
+            style={{color:'#fff',fontSize:'2rem' }}
             type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
             onClick={this.toggle}
           />
@@ -99,7 +100,6 @@ class ContainerBox extends React.Component {
             <Route path="/about" exact component={AboutPage} />
             <Route path="/article" component={ArticlePage} />
             <Route path="/count" component={CounPage} />
-            {/* <Route path="/count" component={countPage} /> */}
           </div>
         </Content>
       </Layout>

@@ -1,4 +1,5 @@
 @import '~antd/dist/antd.less'; // 引入官方提供的 less 样式入口文件
+@import './theme-file.less';
 // @import './index.js'; // 用于覆盖上面定义的变量
 
 
@@ -13,12 +14,7 @@
     list-style: none;
   }
   
-  .ant-layout-header{
-    /* height: 6.4rem; */
-    padding: 0 2rem;
-    /* line-height: 6.4rem; */
-    background: #001529;
-  }
+
   .ant-layout{
     background: #fff;
   }
@@ -48,5 +44,9 @@
     }
     .m-sider{
        display: block
+    }
+    .ant-layout-header{
+        background: #57c86c !important;
+        padding: 0 2rem;
     }
   }
