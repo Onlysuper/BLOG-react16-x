@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar,Icon} from 'antd';
+import { Avatar,Icon,Button} from 'antd';
 import '../styles/HomeCard.less';
 function ListItem(props) {
   const articleList = props.articleList;
@@ -20,10 +20,7 @@ function ListItem(props) {
       <div className='user-block-header'>{props.title}</div>
       <ul className='user-list'>
         {listItems}
-        <div className='more-but'>
-          <span>完整榜单</span>
-          <Icon type="right" />
-        </div>  
+        <Button className='more-but' type="dashed">查看更多<Icon type="right" /></Button>
       </ul>
     </div>
   );

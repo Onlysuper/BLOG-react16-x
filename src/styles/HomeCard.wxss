@@ -1,6 +1,6 @@
-.user-card{
+.user-card {
   background-color: #fff;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.05);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   border-radius: 2px;
   margin-bottom: 1.3rem;
   font-size: 1.16rem;
@@ -9,39 +9,37 @@
 }
 .user-block-header {
   padding: 1rem 1.3rem;
-  border-bottom: 1px solid hsla(0,0%,59.2%,.1);
+  border-bottom: 1px solid rgba(151, 151, 151, 0.1);
 }
-.user-list{
+.user-list {
   padding-left: 0;
 }
 li {
   display: list-item;
   text-align: -webkit-match-parent;
 }
-.link{
+.link {
   padding: 1rem 1.3rem;
   display: flex;
   align-items: center;
-  cursor: pointer;
   text-decoration: none;
   cursor: pointer;
   color: #909090;
 }
-
-.item .link{
+.item .link {
   display: flex;
 }
-.avatar{
+.avatar {
   flex: 0 0 auto;
   width: 3.8rem;
   height: 3.8rem;
   border-radius: 50%;
   margin-right: .8rem;
 }
-.user-info{
-  flex:1
+.user-info {
+  flex: 1;
 }
-.username{
+.username {
   font-size: 1.16rem;
   font-weight: 400;
   color: #333;
@@ -50,7 +48,8 @@ li {
   text-overflow: ellipsis;
   margin-bottom: 3px;
 }
-.position,.position{
+.position,
+.position {
   color: #909090;
   font-size: 1rem;
   margin-bottom: 3px;
@@ -58,13 +57,9 @@ li {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.more-but{
+.more-but {
   width: 100%;
-  // display: flex;
   justify-content: center;
   align-items: center;
-  // color: #007fff;
-  // padding: 1rem 0;
-  // border-top: 1px solid hsla(0,0%,59.2%,.1);
   cursor: pointer;
 }
