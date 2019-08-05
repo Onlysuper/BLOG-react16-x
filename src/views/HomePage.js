@@ -1,6 +1,8 @@
 import React from 'react';
 import { Spin } from 'antd';
 import HomeList from "./HomeList";
+import AdminCard from "./AdminCard";
+import EnglishCard from "./EnglishCard";
 import HomeCard from "./HomeCard";
 import { Row, Col,Button} from 'antd';
 import {getAriticle,getUsers} from '../common/apis';
@@ -15,7 +17,11 @@ class HomePage extends React.Component{
     loadingUser:false,
     loading:false,
     articleList:[],
-    userList:[]
+    userList:[],
+    admin:{
+      name:'一只老萌',
+      img:''
+    }
   };
   componentWillMount(){
     this.getArticles();
@@ -55,10 +61,13 @@ class HomePage extends React.Component{
             </Col>
             <Col xs={24} sm={12} md={4} lg={8} xl={7}>
               <Spin spinning={this.state.loadingUser}>
-              <HomeCard title="作者榜" articleList={this.state.userList}/>
+               <AdminCard title="一只老萌" admin={this.state.admin}/>
               </Spin>
               <Spin spinning={this.state.loadingUser}>
-              <HomeCard title="作者榜" articleList={this.state.userList}/>
+               <EnglishCard title="每日英语" data={this.state.admin}/>
+              </Spin>
+              <Spin spinning={this.state.loadingUser}>
+               <HomeCard title="作者榜" articleList={this.state.userList}/>
               </Spin>
             </Col>
           </Row>

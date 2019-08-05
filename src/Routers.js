@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route,withRouter } from 'react-router-dom'
 import './style.less'  //引入less文件
 // import './App.less';
-import { Layout, Menu,Icon,Avatar} from 'antd';
+import { Layout, Menu,Icon,Avatar,BackTop} from 'antd';
 import HomePage from "./views/HomePage";
 import ArticlePage from "./views/ArticlePage";
 import AboutPage from "./views/AboutPage";
@@ -65,6 +65,7 @@ class ContainerBox extends React.Component {
   }
   render(){
     return (
+      <div>
       <Layout  theme="light">
       <Sider
         theme="light"
@@ -102,8 +103,16 @@ class ContainerBox extends React.Component {
             <Route path="/count" component={CounPage} />
           </div>
         </Content>
+        <div>
+          <BackTop />
+          Scroll down to see the bottom-right
+          <strong style={{ color: 'rgba(64, 64, 64, 0.6)' }}> gray </strong>
+          button.
+        </div>
       </Layout>
     </Layout>
+      
+    </div>
     );
   }
 }
