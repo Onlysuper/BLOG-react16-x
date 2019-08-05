@@ -1,0 +1,52 @@
+@import '~antd/dist/antd.less'; // 引入官方提供的 less 样式入口文件
+// @import './index.js'; // 用于覆盖上面定义的变量
+
+
+*{
+    margin:0;
+    padding: 0;
+  }
+  html{
+    font-size: 12px;
+  }
+  ul,li{
+    list-style: none;
+  }
+  
+  .ant-layout-header{
+    /* height: 6.4rem; */
+    padding: 0 2rem;
+    /* line-height: 6.4rem; */
+    background: #001529;
+  }
+  .ant-layout{
+    background: #fff;
+  }
+  .m-pc-head{
+    display: flex;
+    flex:1
+  }
+  @media screen and (min-width: 900px) {
+    /* 大屏幕 */
+    .m-pc-head{
+      display: flex
+    }
+    .trigger,.m-sider{
+       display: none
+    }
+  }
+  @media screen and (max-width: 900px) {
+    /* 小屏幕 */
+    #live2d-widget{
+      display: none
+    }
+    .m-pc-head{
+      display: none
+    }
+    .trigger{
+      display: inline-block;
+    }
+    .m-sider{
+       display: block
+    }
+  }
