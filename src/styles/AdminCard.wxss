@@ -1,3 +1,13 @@
+.title1 {
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.title2 {
+  color: #222;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
 .admin-card {
   background-color: #fff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -8,7 +18,9 @@
   color: #333;
 }
 .admin-card .user-block-header {
-  font-size: 1.8rem;
+  color: #222;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 .admin-card .content {
   padding: 1rem;

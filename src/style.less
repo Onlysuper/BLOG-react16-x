@@ -7,21 +7,60 @@
     margin:0;
     padding: 0;
   }
+  
   html{
     font-size: 12px;
+  }
+  body{
+    font: 12px "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    color: #555;
   }
   ul,li{
     list-style: none;
   }
   
 
-  .ant-layout{
+  // .ant-layout{
     // background: #fff;
-  }
+  // }
   .m-pc-head{
     display: flex;
     flex:1
   }
+  .animate-wrap{
+    display: none; // 默认不显示
+    &.active{
+        display: block; // active状态显示
+    }
+}
+// 进入动画
+.down-in{
+    animation: downIn 0.3s both;
+}
+@keyframes downIn{
+    from{
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+// 离开动画
+.down-out{
+    animation: downOut 0.3s both;
+}
+@keyframes downOut{
+    from{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    to{
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+}
   @media screen and (min-width: 900px) {
     /* 大屏幕 */
     .m-pc-head{

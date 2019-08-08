@@ -1,3 +1,13 @@
+.title1 {
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.title2 {
+  color: #222;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
 .user-card {
   background-color: #fff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -10,6 +20,9 @@
 .user-block-header {
   padding: 1rem 1.3rem;
   border-bottom: 1px solid rgba(151, 151, 151, 0.1);
+  color: #222;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 .user-list {
   padding-left: 0;

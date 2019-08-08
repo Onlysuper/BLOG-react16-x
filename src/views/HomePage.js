@@ -2,9 +2,10 @@ import React from 'react';
 import { Spin } from 'antd';
 import HomeList from "./HomeList";
 import AdminCard from "./AdminCard";
+import Photos from "../components/Photos";
 import EnglishCard from "./EnglishCard";
 import HomeCard from "./HomeCard";
-import { Row, Col,Button} from 'antd';
+import { Row, Col,Button,Affix} from 'antd';
 import {getAriticle,getUsers} from '../common/apis';
 // vuex start
 // vuex end
@@ -61,16 +62,22 @@ class HomePage extends React.Component{
                 </div>
               </Spin>
             </Col>
-            <Col xs={24} sm={12} md={4} lg={8} xl={7}>
-              <Spin spinning={this.state.loadingUser}>
-               <AdminCard title="一只老萌" admin={this.state.admin}/>
-              </Spin>
+            <Col xs={24} sm={12} md={4} lg={8} xl={7}  ref={(node) => { this.container = node; }}>
+               
               <Spin spinning={this.state.loadingUser}>
                <EnglishCard title="每日英语" data={this.state.admin}/>
               </Spin>
               <Spin spinning={this.state.loadingUser}>
                <HomeCard title="作者榜" articleList={this.state.userList}/>
               </Spin>
+              <Spin spinning={this.state.loadingUser}>
+                <Photos title="相册" admin={this.state.admin}/>
+              </Spin>
+              <Affix ref={(node) => { this.container = node; }}>
+              <Spin spinning={this.state.loadingUser}>
+              <AdminCard title="一只老萌" admin={this.state.admin}/>
+              </Spin>
+              </Affix>
             </Col>
           </Row>
        

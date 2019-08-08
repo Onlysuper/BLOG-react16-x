@@ -1,3 +1,13 @@
+.title1 {
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.title2 {
+  color: #222;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
 .article-list {
   position: relative;
   width: 100%;
@@ -13,14 +23,16 @@
   margin: 0 0 .8rem;
   font-size: 1.3rem;
   line-height: 2.4rem;
-  color: #999;
+  color: #797b7c;
 }
 .title {
   margin: -0.7rem 0 0.4rem;
   display: inherit;
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.5;
+  color: #222;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .wrapImg {
   position: absolute;

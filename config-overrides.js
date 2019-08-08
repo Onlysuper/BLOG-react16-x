@@ -12,7 +12,7 @@ fixBabelImports("import", {
 addLessLoader({
     javascriptEnabled: true,
     modifyVars: { 
-    "@primary-color": "#57c86c",
+    "@primary-color": "#45be67",
     '@link-color':'red',
     '@heading-color':'rgba(0, 0, 0, 0.85)',
     '@text-color':'rgba(0, 0, 0, 0.65)',
