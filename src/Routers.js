@@ -123,7 +123,7 @@ class ContainerBox extends React.Component {
       </Sider>
       <Layout>
         {/* <Header style={{ padding: '0,3rem', position: 'fixed', width: '100%',zIndex:1,background:'#fff',borderBottom: '1px solid #e8e8e8'}}> */}
-        <Header className={ this.state.contentIsShow ? "animate-wrap active down-in" : "animate-wrap"} style={{ padding: '0,3rem', position: 'fixed',zIndex:100, width: '100%',background:'#fff',borderBottom: '1px solid #e8e8e8'}}>
+        <Header className={ this.state.contentIsShow ? "animate-wrap active down-in" : "animate-wrap down-out"} style={{ padding: '0,3rem', position: 'fixed',zIndex:100, width: '100%',background:'#fff',borderBottom: '1px solid #e8e8e8'}}>
           <Icon
             className="trigger"
             style={{color:'#fff',fontSize:'2rem' }}
