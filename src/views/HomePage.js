@@ -54,7 +54,7 @@ class HomePage extends React.Component{
       return (
       
           <Row style={{minWidth:300}} gutter={16}>
-            <Col xs={24} sm={12} md={16} lg={16} xl={17}>
+            <Col xs={24} sm={24} md={24} lg={16} xl={17}>
               <Spin spinning={this.state.loadingArticle}>
                 <div style={{background:'#fff',marginBottom:'1rem'}}>
                 <HomeList articleList={this.state.articleList}/>
@@ -62,7 +62,7 @@ class HomePage extends React.Component{
                 </div>
               </Spin>
             </Col>
-            <Col xs={24} sm={12} md={4} lg={8} xl={7}  ref={(node) => { this.container = node; }}>
+            <Col xs={24} sm={24} md={24} lg={8} xl={7}  ref={(node) => { this.container = node; }}>
                
               <Spin spinning={this.state.loadingUser}>
                <EnglishCard title="每日英语" data={this.state.admin}/>

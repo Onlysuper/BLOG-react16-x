@@ -2,13 +2,13 @@ import React from 'react';
 import { BrowserRouter, Route,withRouter } from 'react-router-dom'
 import './style.less'  //引入less文件
 // import './App.less';
-import { Layout, Menu,Icon,Avatar,BackTop} from 'antd';
+import { Layout, Menu,Icon,Avatar,BackTop,Input} from 'antd';
 import HomePage from "./views/HomePage";
 import ArticlePage from "./views/ArticlePage";
 import ArticleDetail from "./views/ArticleDetail";
 import AboutPage from "./views/AboutPage";
 import CounPage from "./views/CounPage";
-
+const Search = Input.Search;
 
 const { Header, Content,Sider} = Layout;
 
@@ -122,7 +122,6 @@ class ContainerBox extends React.Component {
         <MenuRouter mode="inline"/>
       </Sider>
       <Layout>
-        {/* <Header style={{ padding: '0,3rem', position: 'fixed', width: '100%',zIndex:1,background:'#fff',borderBottom: '1px solid #e8e8e8'}}> */}
         <Header className={ this.state.contentIsShow ? "animate-wrap active down-in" : "animate-wrap down-out"} style={{ padding: '0,3rem', position: 'fixed',zIndex:100, width: '100%',background:'#fff',borderBottom: '1px solid #e8e8e8'}}>
           <Icon
             className="trigger"
@@ -134,6 +133,11 @@ class ContainerBox extends React.Component {
               <div className="logo" />
               <MenuRouter mode="horizontal"/>
               <div>
+              <Search
+                  placeholder="请输入关键字词"
+                  style={{ width: 260,marginRight:'2rem' }}
+                  onSearch={value => console.log(value)}
+                />
               <Avatar style={{ color: '#f56a00', backgroundColor: '#fde3cf',textAlign:'center' }}>U</Avatar>
               </div>
           </div>
